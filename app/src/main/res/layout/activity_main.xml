@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Logo de la empresa y texto de bienvenida -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="6dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo_empresa"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo_ohmydog2"
+            android:layout_gravity="center"/>
+
+        <!-- Texto de bienvenida -->
+        <TextView
+            android:id="@+id/texto_bienvenida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido a Oh My Dog!"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Primer cuadro con imagen y texto -->
+    <LinearLayout
+        android:layout_width="408dp"
+        android:layout_height="250dp"
+        android:background="@drawable/rounded_cuadro"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:elevation="8dp">
+
+        <!-- Imagen dentro del cuadro -->
+        <ImageView
+            android:id="@+id/image_agenda_cita"
+            android:layout_width="320dp"
+            android:layout_height="220dp"
+            android:src="@drawable/image_agendar_nuevo"
+            android:layout_marginTop="-20dp"/>
+
+        <!-- boton debajo de la imagen -->
+        <Button
+            android:id="@+id/btn_agendar_cita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agendar Cita"
+            android:layout_marginTop="-25dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/black"/>
+
+
+    </LinearLayout>
+
+    <!-- Contenedor de dos cuadros -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Primer cuadro adicional -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_cuadro"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Imagen dentro del cuadro -->
+            <ImageView
+                android:id="@+id/image_agendadas"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:src="@drawable/image_agendadas" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Citas Agendadas"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- Segundo cuadro adicional -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_cuadro"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/image_historial"
+                android:layout_width="180dp"
+                android:layout_height="150dp"
+                android:src="@drawable/image_histotial" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Historia de Citas"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_citas"/>
+
+
+    <!-- Botones con iconos y texto en lugar de la barra de navegación -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp">
+
+        <!-- Botón Citas -->
+        <LinearLayout
+            android:id="@+id/btn_citas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_citas"
+                android:contentDescription="Citas" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Citas"
+                android:textSize="14sp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <!-- Botón Agenda -->
+        <LinearLayout
+            android:id="@+id/btn_agenda"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_agenda"
+                android:contentDescription="Agenda" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agenda"
+                android:textSize="14sp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <!-- Botón Cuenta -->
+        <LinearLayout
+            android:id="@+id/btn_cuenta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_cuenta"
+                android:contentDescription="Cuenta" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuenta"
+                android:textSize="14sp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

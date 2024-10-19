@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_citas"
+        android:icon="@drawable/icon_citas"
+        android:title="Citas" />
+    <item
+        android:id="@+id/nav_agenda"
+        android:icon="@drawable/icon_agenda"
+        android:title="Agenda" />
+    <item
+        android:id="@+id/nav_cuenta"
+        android:icon="@drawable/icon_cuenta"
+        android:title="Cuenta" />
+</menu>

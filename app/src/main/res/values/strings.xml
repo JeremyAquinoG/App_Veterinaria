@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">App_Veterinaria</string>
+    <!-- Agrega esto en tu archivo strings.xml -->
+    <string-array name="user_type_array">
+        <item>Cliente</item>
+        <item>Veterinario</item>
+    </string-array>
+
+    <string-array name="veterinario_array">
+        <item>Dr. Carlos</item>
+        <item>Dr. Fernanda</item>
+        <item>Dr. Santiago</item>
+        <!-- Agrega más veterinarios si es necesario -->
+    </string-array>
+</resources>

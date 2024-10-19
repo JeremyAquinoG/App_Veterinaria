@@ -1,0 +1,73 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Semicírculo amarillo mostaza en la parte superior izquierda (detrás de todo) -->
+    <View
+        android:id="@+id/top_circle"
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:background="@drawable/circle_shape"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="-225dp"
+        />  <!-- Coloca el círculo detrás de otros elementos -->
+
+    <!-- Reemplazamos el TextView por un ImageView para mostrar el logo -->
+    <ImageView
+        android:id="@+id/logo_image"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/logo_ohmydog"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="-10dp"/>
+
+    <!-- Imagen de la veterinaria con mascota -->
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="500dp"
+        android:layout_height="600dp"
+        android:src="@drawable/image_login"
+        android:layout_below="@id/logo_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-225dp"/>
+
+    <!-- Cuadro turquesa que contiene botones -->
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="500dp"
+        android:layout_height="290dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/rounded_top_corners"
+        android:layout_alignParentBottom="true"
+        android:padding="24dp">
+
+        <!-- Botón de Otros métodos de ingreso -->
+        <Button
+            android:id="@+id/btn_other_methods"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:text="Iniciar Sesion"
+            android:background="@drawable/rounded_button"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="46dp"/>
+
+        <Button
+            android:id="@+id/btn_create_account"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:text="Crear Cuenta"
+            android:background="@drawable/rounded_button"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="46dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
